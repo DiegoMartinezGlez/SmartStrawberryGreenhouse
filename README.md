@@ -1,7 +1,7 @@
 # SmartStrawberryGreenhouse
 
 ## Introduction
-*SmartStrawberryGreenhouse* is an IoT-GreenHouse project to frow strawberries. The main goal is to grow strawberries out of season with automations, using indoor lights and monitoring temperature and humidity to keep them into the required ranges.
+*SmartStrawberryGreenhouse* is an IoT-GreenHouse project to grow strawberries. The main goal is do it out of season, using indoor illumination and monitoring temperature and humidity to keep them into the required ranges.
 
 ## Requirements
 Basic experience with raspberries 3/4 and python3 for the IoT stuff. Python3 and pip3 installed.
@@ -11,7 +11,9 @@ Basic experience with raspberries 3/4 and python3 for the IoT stuff. Python3 and
 #### Description
 Strawberries are planted in a single circular pot (40 cm. diameter), inside a custom wooden box (60x60x60 cm aprox).
 #### Illumination
-[XXX details] light ...
+I have used a 50W led light, workin with freqs 630-660 nm, 430-460 Nm and 3000-65000k.
+It is one of the cheapest, surely you can find better indoor led lights.
+
 #### IoT telemetry
 A raspberry 3 model b+ with raspbian strech (no desktop) with a DHT11 sensor (temperature+humidity) is used to send telemetry to ThingsBoard.
 The job is scheduled with "crontab", runs each hour and calls a python script.
