@@ -64,7 +64,16 @@ And install the library:
 cd Adafruit_Python_DHT
 sudo python3 setup.py install
 ```
+Make sure you have wired the sensor to the Raspberry GPIO, and test it with this sample code:
+```
+import sys
+import Adafruit_DHT
+import time
 
+humidity, temperature = Adafruit_DHT.read_retry(11, 4)
+print('Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity))
+```
+Check file *sensor.py* for a full example sending data to IoT server (ThingsBoard) with MQTT.
 
 
 
