@@ -4,7 +4,7 @@
 *SmartStrawberryGreenhouse* is an IoT-GreenHouse project to frow strawberries. The main goal is to grow strawberries out of season with automations, using indoor lights and monitoring temperature and humidity to keep them into the required ranges.
 
 ## Requirements
-Basic experience with raspberries 3/4 and python3 for the IoT stuff.
+Basic experience with raspberries 3/4 and python3 for the IoT stuff. Python3 and pip3 installed.
 
 ## Project components
 ### Orchard
@@ -36,8 +36,36 @@ You can choose what to plant and how (# of pots, light, orchard sizes, ...). But
 - How to take pics (in progress)
 - How to manage light
 
-TODO: ...
 ### Temperature and Humidity adquisition with sensor DHT11
 DHT11 has 2 versions: with or without board. I have the one with board. Without board you will also need a 10K resistor. These are the connections with raspberry GPIO
+
+![DHT11 with board](DHT11_board.png)
+![DHT11 without board](DHT11_noBoard.png)
+
+#### Python code
+This tutorial works with Python3. Code references python executable as "python3". If your python3 executable is "python", change "python3" with "python" in the next code examples.
+
+You will need to install the Adafruit DHT11 library. Make sure you have git installed:
+```
+sudo apt-get install git-core
+```
+Clone the library project:
+```
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+```
+Install dependencies:
+```
+sudo apt-get install build-essential python-dev
+```
+And install the library:
+```
+cd Adafruit_Python_DHT
+sudo python3 setup.py install
+```
+
+
+
+
+
 
 
